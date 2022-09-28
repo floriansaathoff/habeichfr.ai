@@ -40,12 +40,23 @@
     align-content: center;
     -webkit-filter: invert(100%);
     filter: invert(100%);
+    vertical-align: middle;
 }
 
 #help_icon{
-    width: 5%;
+    width: auto;
     color: white;
+    text-align: center;
     align-content: center;
+    vertical-align: middle;
     -webkit-filter: invert(100%);
     filter: invert(100%); 
+}
+
+#sadsmile{
+    color: gray;
+    width: 8%;
+    text-align: center;
+    vertical-align: middle;
+
 }
