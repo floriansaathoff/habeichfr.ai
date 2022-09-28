@@ -30,11 +30,15 @@
 #hearticon{
     width: 4%;
     vertical-align: middle;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
 #githublogo{
     width: 5%;
     color: white;
     align-content: center;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
