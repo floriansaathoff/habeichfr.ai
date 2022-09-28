@@ -1,6 +1,8 @@
 window.onload = (event) => {
     console.log('page is fully loaded');
-    Swal.fire({
+    if(document.cookie == undefined){
+
+        Swal.fire({
         title: '<strong>Huch, du bist scheinbar noch nich angemeldet</strong>',
         icon: 'info',
         html:
@@ -25,5 +27,6 @@ window.onload = (event) => {
         confirmButtonText: 'Anmelden',
         cancelButtonText: 'Abbrechen',
         focusConfirm: false
-    })
+        }) 
+    }
 }
