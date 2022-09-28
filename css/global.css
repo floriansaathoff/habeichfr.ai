@@ -18,3 +18,23 @@
     border-radius: 25px
     
 }
+
+.footerstyle{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    align-items: center;
+    text-align: center;
+
+}
+
+#hearticon{
+    width: 4%;
+    vertical-align: middle;
+}
+
+#githublogo{
+    width: 5%;
+    color: white;
+    align-content: center;
+}
+
