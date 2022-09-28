@@ -24,18 +24,20 @@
     color: white;
     align-items: center;
     text-align: center;
-
+    position:absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 #hearticon{
-    width: 2%;
+    width: clamp(2%, 2%, 20%);
     vertical-align: middle;
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }
 
 #githublogo{
-    width: 2.5%;
+    width: clamp(3%, 5%, 11%);
     color: white;
     align-content: center;
     -webkit-filter: invert(100%);
@@ -44,7 +46,7 @@
 }
 
 #help_icon{
-    width: 3%;
+    width: clamp(3%, 5%, 11%);
     color: white;
     text-align: center;
     align-content: center;
