@@ -40,4 +40,5 @@ window.onload = (event) => {
 
 const deletecookie = () => {
     sessionStorage.clear();
+    console.log("cookies cleared");
 };
