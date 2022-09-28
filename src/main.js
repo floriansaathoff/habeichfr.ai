@@ -37,3 +37,7 @@ window.onload = (event) => {
         })
     }
 }
+
+const deletecookie = () => {
+    sessionStorage.clear();
+};
