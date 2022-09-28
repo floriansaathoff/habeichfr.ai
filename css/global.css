@@ -42,3 +42,10 @@
     filter: invert(100%);
 }
 
+#help_icon{
+    width: 5%;
+    color: white;
+    align-content: center;
+    -webkit-filter: invert(100%);
+    filter: invert(100%); 
+}

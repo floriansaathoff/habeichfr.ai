@@ -1,4 +1,4 @@
-window.onload = (event) => {
+/* window.onload = (event) => {
     console.log('page is fully loaded');
     Swal.fire({
         title: '<strong>Huch, du bist scheinbar noch nich angemeldet</strong>',
@@ -27,3 +27,4 @@ window.onload = (event) => {
         focusConfirm: false
     })
 }
+ */
