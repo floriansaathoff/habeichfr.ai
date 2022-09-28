@@ -27,6 +27,11 @@
 
 }
 
+#hearticon{
+    width: 4%;
+    vertical-align: middle;
+}
+
 #githublogo{
     width: 5%;
     color: white;
