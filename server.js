@@ -47,7 +47,7 @@ app.post("/checkdate", async (req, res) => {
 
             let thisday = yyyy + mm + dd;
             
-            thisday = "20221003"; //Uncomment to test for a Feiertag
+            //thisday = "20221003"; //Uncomment to test for a Feiertag
 
             const bundesland = mongoose.model(Bundesland, bundeslandSchema);
 

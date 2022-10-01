@@ -1,11 +1,31 @@
 # habeichfr.ai
 Habe ich heute frei?
 
+----->   Mit dem Styling müssen wir uns noch was überlegen. Das ist jetzt nur eine Übergangslösung
+
+//   ------     Projekt lokal starten       -------    //
+Node.js aus dem Internet herunterladen und installieren
+
+Dann das Projekt in Visual Studio Code öffnen und dann mit strg + shift + ö ein neues termial fenster öffnen und folgende
+zwei zeilen eingeben und bestätigen
+
+npm i
+npm run start
+
+Der Server sollte nun laufen
+
+
+//    --------    Zusatzinfos     ---------      //
+um ein Datum zu testen in server.js zeile 50 einkommentieren
+Die HTML befindet sich unter views
+JS, CSS und die Icons befinden sich unter public
+
+
+
 
 
 Colorpalette: https://colorhunt.co/palette/16213e0f3460533483e94560
 t7hKhvNpxpDkTCF2
-
 
 Länderkürzel für die Datenbank:
 https://www.datenportal.bmbf.de/portal/de/G122.html#:~:text=SN%20%3D%20Sachsen%3B,TH%20%3D%20Th%C3%BCringen.
