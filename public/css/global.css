@@ -1,0 +1,115 @@
+
+.bodystyle{
+    background-color: #16213E;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.headerstyle{
+    background-color: #E94560;
+   margin: 20%;
+}
+
+.mainstyle{
+/*     background-color: #E94560;
+    color: white;
+    margin: 3%;
+    padding: 7%;
+    text-align: center;
+    border-radius: 25px */
+    
+}
+
+.footerstyle{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+#hearticon{
+    width: 2%;
+    vertical-align: middle;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+#githublogo{
+    width: 2.5%;
+    color: white;
+    align-content: center;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    vertical-align: middle;
+}
+
+#help_icon{
+    width: 3%;
+    color: white;
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+    -webkit-filter: invert(100%);
+    filter: invert(100%); 
+}
+
+#sadsmile{
+    color: gray;
+    width: 8%;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+#imprint{
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+p {
+    margin-bottom: 5px !important;
+}
+
+ body {
+	 background: radial-gradient(ellipse at bottom, #022227 0%, #000 100%);
+	 position: relative;
+	 height: 100vh;
+	 width: 100vw;
+	 margin: 0;
+}
+ h1 {
+	 margin: 0;
+     font-size: 30rem !important;
+	 letter-spacing: 1vw;
+	 position: absolute;
+	 top: 15vh;
+	 left: 50%;
+	 transform: translateX(-50%);
+	 color: white;
+	 background: url('https://thumbs.dreamstime.com/b/tropical-flower-pattern-seamless-flowers-blossom-flowers-nature-background-vector-illustration-61142748.jpg');
+	 background-size: auto 200%;
+	 background-clip: text;
+	 text-fill-color: transparent;
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 animation: shine 8s linear infinite;
+}
+ h1:nth-child(2) {
+	 top: 50vh;
+}
+ @keyframes shine {
+	 from {
+		 background-position: center 0;
+	}
+	 to {
+		 background-position: center 200%;
+	}
+}
+ 
