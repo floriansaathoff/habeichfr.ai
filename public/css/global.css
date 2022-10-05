@@ -16,6 +16,7 @@
 #datenavigator{
     display: flex;
     justify-content: center;
+    margin-top: 22px;
 }
 
 .footerstyle{
@@ -31,6 +32,7 @@
     vertical-align: middle;
     -webkit-filter: invert(100%);
     filter: invert(100%);
+    margin-top: 4px;
 }
 
 #githublogo{
@@ -112,4 +114,11 @@ p {
  
 .iconbar{
     width: 70%;
+    margin-top: -2px;
+}
+
+#date {
+    color: white;
+    margin-left: 40px;
+    margin-right: 46px;
 }
