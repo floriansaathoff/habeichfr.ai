@@ -39,7 +39,7 @@ app.post("/checkdate", async (req, res) => {
         const Bundesland = req.body.Bundesland;
         const dev = req.body.dev;
         if(Bundesland) {
-            const url = mongoose.connect("mongodb+srv://admin:u3nZhx8yHFnn3Ivk@cluster0.ezibze2.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true });
+            const url = "mongodb+srv://admin:u3nZhx8yHFnn3Ivk@cluster0.ezibze2.mongodb.net/?retryWrites=true&w=majority";
 
             await mongoose.connect(url, { useNewUrlParser: true });
 
