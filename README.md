@@ -21,7 +21,7 @@ Die HTML befindet sich unter views
 JS, CSS und die Icons befinden sich unter public
 
 
-
+mongodb+srv://admin:u3nZhx8yHFnn3Ivk@cluster0.ezibze2.mongodb.net/?retryWrites=true&w=majority
 
 
 Colorpalette: https://colorhunt.co/palette/16213e0f3460533483e94560
