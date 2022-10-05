@@ -86,7 +86,7 @@ p {
 }
  h1 {
 	 margin: 0;
-     font-size: clamp(220px, 65vw, 400px) !important;
+     font-size: clamp(130px, 35vw, 400px) !important;
 	 letter-spacing: 1vw;
 	 position: absolute;
      font-weight: 800 !important;
