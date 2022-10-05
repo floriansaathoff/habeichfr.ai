@@ -31,14 +31,14 @@
 }
 
 #hearticon{
-    width: 2%;
+    width: 20px;
     vertical-align: middle;
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }
 
 #githublogo{
-    width: 2.5%;
+    width: 30px;
     color: white;
     align-content: center;
     -webkit-filter: invert(100%);
@@ -47,7 +47,7 @@
 }
 
 #help_icon{
-    width: 3%;
+    width: 36px;
     color: white;
     text-align: center;
     align-content: center;
@@ -86,9 +86,10 @@ p {
 }
  h1 {
 	 margin: 0;
-     font-size: 30rem !important;
+     font-size: clamp(220px, 65vw, 400px) !important;
 	 letter-spacing: 1vw;
 	 position: absolute;
+     font-weight: 800 !important;
 	 top: 15vh;
 	 left: 50%;
 	 transform: translateX(-50%);

@@ -1,6 +1,7 @@
 //create a Server
 const express = require("express");
 const app = express();
+const port = 3000;
 app.use(express.urlencoded({ extended: false }));
 
 //DB Connection
@@ -25,7 +26,7 @@ app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'))
 app.use(express.static(__dirname + '/public'));
 
 try {
-    mongoose.connect("mongodb+srv://admin:u3nZhx8yHFnn3Ivk@cluster0.ezibze2.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true });
+    mongoose.connect(process.env.MONGOSTR, { useNewUrlParser: true });
     console.info(`Listening on page`);
 } catch (e) {
     console.log("There was an error starting the app");
@@ -34,9 +35,10 @@ try {
 
 app.post("/checkdate", async (req, res) => {
     try {
-        const Bundesland = req.body.data;
+        const Bundesland = req.body.Bundesland;
+        const dev = req.body.dev;
         if(Bundesland) {
-            const url = "mongodb+srv://admin:u3nZhx8yHFnn3Ivk@cluster0.ezibze2.mongodb.net/?retryWrites=true&w=majority";
+            const url = process.env.MONGOSTR;
 
             await mongoose.connect(url, { useNewUrlParser: true });
 
@@ -46,8 +48,9 @@ app.post("/checkdate", async (req, res) => {
             var yyyy = today.getFullYear();
 
             let thisday = yyyy + mm + dd;
-            
             //thisday = "20221003"; //Uncomment to test for a Feiertag
+
+            if(dev) {thisday = parseInt(dev)}
 
             const bundesland = mongoose.model(Bundesland, bundeslandSchema);
 
@@ -65,4 +68,4 @@ app.post("/checkdate", async (req, res) => {
     }
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || port, () => console.log("listening on port"));
