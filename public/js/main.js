@@ -39,19 +39,20 @@ const checkSession = () => {
             }}
         ).then(function (result) {
             sessionStorage.setItem("Bundesland", listOfItemsForSelectBox[result.value]);
+            checkdate(sessionStorage.getItem("Bundesland"));
         })
+    } else {
+        checkdate(sessionStorage.getItem("Bundesland"));
     }
-
-    checkdate(sessionStorage.getItem("Bundesland"));
 };
 
-const checkdate = (Bundesland) => {
+const checkdate = (Bundesland, dev) => {
     console.log(Bundesland + " is selected");
     $.ajax({
         url: "/checkdate",
         method: "POST",
         contentType: "application/json",
-        data: JSON.stringify({data: Bundesland}), 
+        data: JSON.stringify({Bundesland: Bundesland, dev: dev}), 
         success: function (response) {
           if(response){
             console.log("Yes Feiertag");
