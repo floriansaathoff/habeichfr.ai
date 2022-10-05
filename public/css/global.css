@@ -13,14 +13,9 @@
    margin: 20%;
 }
 
-.mainstyle{
-/*     background-color: #E94560;
-    color: white;
-    margin: 3%;
-    padding: 7%;
-    text-align: center;
-    border-radius: 25px */
-    
+#datenavigator{
+    display: flex;
+    justify-content: center;
 }
 
 .footerstyle{
