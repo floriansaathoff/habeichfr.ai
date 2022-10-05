@@ -75,6 +75,7 @@ function KeyPress(e) {
         sessionStorage.clear();
         console.log("cookies cleared");
         checkSession();
+        $("h1").text("")
     }     
 }
 
