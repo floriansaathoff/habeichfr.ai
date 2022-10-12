@@ -20,6 +20,26 @@ window.onload = (event) => {
     console.log('page is fully loaded');
     checkSession();
     $("h3").text(checkcurrentdate);
+    $("#double_forward").on("click", double_forward())
+    $("#forward").on("click", forward())
+    $("#backward").on("click", backward())
+    $("#double_backward").on("click", double_backward())
+}
+
+const double_forward = () => {
+    today.getDate() + 7
+}
+
+const forward = () => {
+    today.getDate() + 1
+}
+
+const backward = () => {
+    today.getDate() - 1
+}
+
+const double_backward = () => {
+    today.getDate() - 7
 }
 
 const checkcurrentdate = () => {
