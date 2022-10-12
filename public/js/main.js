@@ -20,34 +20,21 @@ window.onload = (event) => {
     console.log('page is fully loaded');
     checkSession();
     $("h3").text(checkcurrentdate);
-    $("#double_forward").on("click", double_forward())
-    $("#forward").on("click", forward())
-    $("#backward").on("click", backward())
-    $("#double_backward").on("click", double_backward())
+    $("#double_forward").on("click", berechne_datum_add(7))
+    $("#forward").on("click", berechne_datum_add(1))
+    $("#backward").on("click", berechne_datum_sub(1))
+    $("#double_backward").on("click", berechne_datum_sub(7))
 }
 
-const double_forward = () => {
-    berechne_datum_add(7)
-}
-
-const forward = () => {
-    berechne_datum_add(1)
-}
-
-const backward = () => {
-    berechne_datum_sub(1)
-}
-
-const double_backward = () => {
-    berechne_datum_sub(7)
-}
 
 const berechne_datum_add = (tage) => {
+    console.log("Adding")
     let date = new Date($("h3").text().substring(3, 6) + $("h3").text().substring(0, 3) + $("h3").text().substring(6));
     $("h3").text(date.addDays(tage).toLocaleDateString("de-DE").replace(".", "-").replace(".", "-"));
 }
 
 const berechne_datum_sub = (tage) => {
+    console.log("Subtracting")
     let date = new Date($("h3").text().substring(3, 6) + $("h3").text().substring(0, 3) + $("h3").text().substring(6));
     $("h3").text(date.subDays(tage).toLocaleDateString("de-DE").replace(".", "-").replace(".", "-"));
 }
