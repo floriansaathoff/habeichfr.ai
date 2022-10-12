@@ -27,12 +27,17 @@
     padding-bottom: 25px;
 }
 
+.noclick {
+    cursor: auto !important;
+}
+
 .hearticon{
     width: 20px;
     vertical-align: middle;
     -webkit-filter: invert(100%);
     filter: invert(100%);
     margin-top: 4px;
+    cursor: pointer;
 }
 
 #githublogo{
