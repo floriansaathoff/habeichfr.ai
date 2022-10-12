@@ -1,5 +1,42 @@
 # habeichfr.ai
-Habe ich heute frei?
+Habe ich heute fr.ai?
+Diese Frage stellen sich jeden Tag Millionen von Menschen in Deutschland. 10.000de Menschen gehen an Feiertagen zur Arbeit oder Schule und stehen dann vor verschlossenen Türen.
+
+ABER DAS MUSS NICHT SEIN 😱
+
+
+Mit habeichfr.ai ist es fast unmöglich feiertage zu verpassen und das Kinderleicht.
+Sie müssen nur Ihr Bundesland eintragen und habeichfr.ai zeigt Ihnen automatisch, ob Sie zuhause bleiben können.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+Seitdem ich habeichfr.ai benutze bin ich nie wieder an Feiertagen zur Arbeit gefahren
+Diese Website ist ein MUSS für Menschen ohne Kalender wie ich. Außerdem ist es KOSTENLOS.
+Die Website sieht wundervoll aus und sie ist einfach zu bedienen.
+Ich muss nur mein Bundesland wissen und den Rest mach die Seite.
+~Bild.de
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+~Brigitte.de
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~PASSWORD VAULT~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------------------------------------------------------------------------------------
 
 ----->   Mit dem Styling müssen wir uns noch was überlegen. Das ist jetzt nur eine Übergangslösung
 
