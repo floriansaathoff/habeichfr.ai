@@ -27,19 +27,41 @@ window.onload = (event) => {
 }
 
 const double_forward = () => {
-    today.getDate() + 7
+    berechne_datum_add(7)
 }
 
 const forward = () => {
-    today.getDate() + 1
+    berechne_datum_add(1)
 }
 
 const backward = () => {
-    today.getDate() - 1
+    berechne_datum_sub(1)
 }
 
 const double_backward = () => {
-    today.getDate() - 7
+    berechne_datum_sub(7)
+}
+
+const berechne_datum_add = (tage) => {
+    let date = new Date($("h3").text().substring(3, 6) + $("h3").text().substring(0, 3) + $("h3").text().substring(6));
+    $("h3").text(date.addDays(tage).toLocaleDateString("de-DE").replace(".", "-").replace(".", "-"));
+}
+
+const berechne_datum_sub = (tage) => {
+    let date = new Date($("h3").text().substring(3, 6) + $("h3").text().substring(0, 3) + $("h3").text().substring(6));
+    $("h3").text(date.subDays(tage).toLocaleDateString("de-DE").replace(".", "-").replace(".", "-"));
+}
+
+Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+}
+
+Date.prototype.subDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() - days);
+    return date;
 }
 
 const checkcurrentdate = () => {
