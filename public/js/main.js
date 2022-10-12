@@ -20,9 +20,15 @@ window.onload = (event) => {
     console.log('page is fully loaded');
     checkSession();
     $("h3").text(checkcurrentdate);
+
     let date = new Date($("h3").text().substring(3, 6) + $("h3").text().substring(0, 3) + $("h3").text().substring(6));
-    date.setDate(date + 1);
-    console.log(date);
+    $("h3").text(date.addDays(5).toLocaleDateString("de-DE").replace(".", "-").replace(".", "-"));
+}
+
+Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
 }
 
 const checkcurrentdate = () => {
