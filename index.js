@@ -36,26 +36,16 @@ try {
 app.post("/checkdate", async (req, res) => {
     try {
         const Bundesland = req.body.Bundesland;
-        const dev = req.body.dev;
+        const date = req.body.date;
         if(Bundesland) {
             const url ="mongodb+srv://admin:u3nZhx8yHFnn3Ivk@cluster0.ezibze2.mongodb.net/?retryWrites=true&w=majority";
 
             await mongoose.connect(url, { useNewUrlParser: true });
 
-            var today = new Date();
-            var dd = String(today.getDate()).padStart(2, '0');
-            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-            var yyyy = today.getFullYear();
-
-            let thisday = yyyy + mm + dd;
-            //thisday = "20221003"; //Uncomment to test for a Feiertag
-
-            if(dev) {thisday = parseInt(dev)}
-
             const bundesland = mongoose.model(Bundesland, bundeslandSchema);
 
             // Find the Day in Bundesland
-            const theday = await bundesland.findOne({ Feiertag: thisday });
+            const theday = await bundesland.findOne({ Feiertag: date });
 
             res.status(200).json(theday);
         } else {

@@ -17,26 +17,34 @@ let listOfItemsForSelectBox = [
     'Thüringen']
 
 window.onload = (event) => {
-    console.log('page is fully loaded');
+    //console.log('page is fully loaded');
     checkSession();
     $("h3").text(checkcurrentdate);
-    $("#double_forward").on("click", berechne_datum_add(7))
-    $("#forward").on("click", berechne_datum_add(1))
-    $("#backward").on("click", berechne_datum_sub(1))
-    $("#double_backward").on("click", berechne_datum_sub(7))
+    $("#double_forward").on("click", function() { berechne_datum_add(7) })
+    $("#forward").on("click", function() { berechne_datum_add(1) })
+    $("#backward").on("click", function() { berechne_datum_sub(1) })
+    $("#double_backward").on("click", function() { berechne_datum_sub(7) })
 }
 
+const selectDate = () => {
+    let currentSelection = $("h3").text();
+    //console.log(currentSelection);
+    let date = new Date(currentSelection.substring(3, 6) + currentSelection.substring(0, 3) + currentSelection.substring(6));
+    return date;
+}
 
 const berechne_datum_add = (tage) => {
-    console.log("Adding")
-    let date = new Date($("h3").text().substring(3, 6) + $("h3").text().substring(0, 3) + $("h3").text().substring(6));
-    $("h3").text(date.addDays(tage).toLocaleDateString("de-DE").replace(".", "-").replace(".", "-"));
+    //console.log("Adding " + tage + " day(s)")
+    let date = selectDate().addDays(tage);
+    $("h3").text(('0' + date.getDate()).slice(-2) + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + date.getFullYear());
+    checkdate(sessionStorage.getItem("Bundesland"), $("h3").text());
 }
 
 const berechne_datum_sub = (tage) => {
-    console.log("Subtracting")
-    let date = new Date($("h3").text().substring(3, 6) + $("h3").text().substring(0, 3) + $("h3").text().substring(6));
-    $("h3").text(date.subDays(tage).toLocaleDateString("de-DE").replace(".", "-").replace(".", "-"));
+    //console.log("Subtracting " + tage + " day(s)")
+    let date = selectDate().subDays(tage);
+    $("h3").text(('0' + date.getDate()).slice(-2) + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + date.getFullYear());
+    checkdate(sessionStorage.getItem("Bundesland"), $("h3").text());
 }
 
 Date.prototype.addDays = function(days) {
@@ -69,7 +77,7 @@ const checkSession = () => {
             input: 'select',
             inputOptions: listOfItemsForSelectBox,
             inputPlaceholder: 'Wähle dein Bundesland',
-            showCancelButton: true,
+            showCancelButton: false,
             icon: 'info',
             inputValidator: function (value) {
                 return new Promise(function (resolve, reject) {
@@ -80,20 +88,21 @@ const checkSession = () => {
             }}
         ).then(function (result) {
             sessionStorage.setItem("Bundesland", listOfItemsForSelectBox[result.value]);
-            checkdate(sessionStorage.getItem("Bundesland"));
+            checkdate(sessionStorage.getItem("Bundesland"), checkcurrentdate());
         })
     } else {
-        checkdate(sessionStorage.getItem("Bundesland"));
+        checkdate(sessionStorage.getItem("Bundesland"), checkcurrentdate());
     }
 };
 
-const checkdate = (Bundesland, dev) => {
-    console.log(Bundesland + " is selected");
+const checkdate = (Bundesland, date) => {
+    date = date.split("-")[2] + date.split("-")[1] + date.split("-")[0];
+
     $.ajax({
         url: "/checkdate",
         method: "POST",
         contentType: "application/json",
-        data: JSON.stringify({Bundesland: Bundesland, dev: dev}), 
+        data: JSON.stringify({Bundesland: Bundesland, date: date}), 
         success: function (response) {
           if(response){
             console.log("Yes Feiertag");
