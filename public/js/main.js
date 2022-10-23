@@ -79,6 +79,7 @@ const checkSession = () => {
             inputPlaceholder: 'Wähle dein Bundesland',
             showCancelButton: false,
             icon: 'info',
+            allowOutsideClick: false,
             inputValidator: function (value) {
                 return new Promise(function (resolve, reject) {
                     if (value != null) {
