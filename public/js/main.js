@@ -108,9 +108,13 @@ const checkdate = (Bundesland, date) => {
           if(response){
             console.log("Yes Feiertag");
             $("h1").text("Ja")
-          } else {
+            $("#extra-text").text("ein Feiertag")
+        } else {
             console.log("No Feiertag");
-            $("h1").text("Nein")
+            if($("h1").text() != "Nein"){
+                $("h1").text("Nein")
+                $("#extra-text").text("leider kein Feiertag")
+            }
           }
         },
         error: function (err) {

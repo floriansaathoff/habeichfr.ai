@@ -29,6 +29,7 @@
 
 .noclick {
     cursor: auto !important;
+    margin-top: 0 !important;
 }
 
 .hearticon{
@@ -72,7 +73,17 @@
     text-align: center;
 }
 
-
+#extra-text {
+    color: white;
+    background: url('https://thumbs.dreamstime.com/b/tropical-flower-pattern-seamless-flowers-blossom-flowers-nature-background-vector-illustration-61142748.jpg');
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s linear infinite;
+    margin-top: 320px;
+    font-size: clamp(30px, 10vw, 100px) !important;
+}
 
 
 
@@ -126,4 +137,8 @@ p {
     color: white;
     margin-left: 40px;
     margin-right: 46px;
+}
+
+#forward {
+    margin-right: 8px;
 }
