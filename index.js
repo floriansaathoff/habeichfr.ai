@@ -37,6 +37,7 @@ app.post("/checkdate", async (req, res) => {
     try {
         const Bundesland = req.body.Bundesland;
         const date = req.body.date;
+        console.log(Bundesland, date);
         if(Bundesland) {
             const url ="mongodb+srv://admin:u3nZhx8yHFnn3Ivk@cluster0.ezibze2.mongodb.net/?retryWrites=true&w=majority";
 
