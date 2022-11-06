@@ -37,6 +37,7 @@ app.post("/checkdate", async (req, res) => {
     try {
         const Bundesland = req.body.Bundesland;
         const date = req.body.date;
+        console.log(Bundesland, date);
         if(Bundesland) {
             const url = process.env.MONGODB_URL;
 

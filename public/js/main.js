@@ -28,8 +28,9 @@ window.onload = (event) => {
 
 const selectDate = () => {
     let currentSelection = $("h3").text();
-    //console.log(currentSelection);
-    let date = new Date(currentSelection.substring(3, 6) + currentSelection.substring(0, 3) + currentSelection.substring(6));
+    console.log(currentSelection);
+    let date = new Date(currentSelection.substring(3, 6) + "/" + currentSelection.substring(0, 3) + "/" + currentSelection.substring(6));
+   console.log();
     return date;
 }
 
@@ -105,7 +106,8 @@ const checkdate = (Bundesland, date) => {
         contentType: "application/json",
         data: JSON.stringify({Bundesland: Bundesland, date: date}), 
         success: function (response) {
-          if(response){
+            console.log(response);
+            if(response != null){
             console.log("Yes Feiertag");
             $("h1").text("Ja")
             $("#extra-text").text("ein Feiertag")
