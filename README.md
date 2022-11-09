@@ -22,6 +22,11 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 ~Brigitte.de
 
+Quellen - NC Lizenz
+https://thumbs.dreamstime.com/b/tropical-flower-pattern-seamless-flowers-blossom-flowers-nature-background-vector-illustration-61142748.jpg
+https://de.wikipedia.org/wiki/Gesetzliche_Feiertage_in_Deutschland
+
+
 
 
 
